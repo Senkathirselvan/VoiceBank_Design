@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Dubbing Artist Information</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="bg-SpringWood ">
+     <div class="bg-GreenishBlue text-black p-5 rounded-lg m-2 flex items-center justify-between ">
+        <div class="cursor-pointer">
+            <a class="text-2xl font-bold text-white font-serif hover:text-black">Home</a>
+        </div>
+    
+        <div class="cursor-pointer " >
+            <a  class="text-xl font-bold text-white font-serif hover:text-black">Find Voice|</a>
+            <a  class="text-xl font-bold text-white font-serif hover:text-black">About|</a>
+            <a  class="text-xl font-bold text-white font-serif hover:text-black">Contac US</a>
+        </div>
+        
+    </div>
+    
+    <div class="text-6xl text-GreenishBlue font-serif mt-8">
+        <center>
+        <h1>Search Voice Artist</h1>
+        </center>
+    </div>
+    <center>
+    <div class="mt-10  space-x-3">
+        <select class="bg-SurfCrest text-xl text-center font-bold text-GreenishBlue font-serif rounded-lg  h-8 w-32">
+            <option>Languages</option>
+            <option>Tamil</option>
+            <option>English</option>
+            <option>Hindi</option>
+            <option>malayalam</option>
+        </select>
+        <select class="bg-SurfCrest text-xl text-center font-bold text-GreenishBlue font-serif rounded-lg  h-8 w-32">
+            <option>Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        <select class="bg-SurfCrest text-xl text-center font-bold text-GreenishBlue font-serif rounded-lg  h-8 w-32">
+            <option>Slang</option>                       
+            <option>Chennai Slang</option>
+            <option>Madurai Slang</option>
+            <option>Kovai Slang</option>
+            <option>Trichi Slang</option>
+        </select>
+        <select class="bg-SurfCrest text-xl text-center font-bold text-GreenishBlue font-serif rounded-lg  h-8 w-32">
+            <option>Age</option>
+            <option>0-10</option>
+            <option>11-20</option>
+            <option>21-30</option>
+            <option>31-40</option>
+            <option>41-50</option>
+            <option>51-60</option>
+        </select>
+        <button class="bg-GreenishBlue hover:bg-teal-500 text-white text-xl font-bold font-serif rounded-full space-x-1 h-8  w-24" > Search</button>
+
+
+        <!--------------Enquiry Button Codes---------------->
+
+        <button id="openModalButton" class="bg-GreenishBlue hover:bg-teal-500 text-white text-xl font-bold font-serif rounded-full h-8 w-24"> Enquiry</button>
+
+        <div id="myModal" class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-SpringWood p-8 rounded-lg shadow-lg z-50 border-4 border-GreenishBlue " style="width: calc(100% - 950px); height: calc(100vh - 320px)">
+            <span id="closeButton" class="absolute top-0 right-3 cursor-pointer text-gray-600 text-xl">&times;</span>
+            <div class="flex justify-center">
+                <form class="flex flex-col ">
+                    <div class="flex items-center mt-5">
+                        <label for="name" class="block text-2xl font-bold text-black font-serif pr-3 mr-36">Name:</label>
+                        <input type="text" id="name" placeholder="Enter Your Name" class=" text-xl font-bold text-black mt-3 font-serif border-2 rounded-md border-black px-28 py-2">
+                    
+                    </div>
+                    <div class="flex items-center mt-5">
+                        <label for="E-Mail" class="block text-2xl font-bold text-black font-serif pr-2 mr-36">E-Mail:</label>
+                        <input type="number" id="age" placeholder="Enter Your E-Mail" class="text-xl font-bold text-black mt-3 font-serif border-2 rounded-md border-black px-28 py-2">
+                    </div>
+                    <div class="flex items-center mt-5">
+                        <label for="Company" class="block text-2xl font-bold text-black font-serif pr-3 mr-28">Company:</label>
+                        <input type="text" id="address" placeholder="Enter Your Company" class="  text-xl font-bold text-black mt-3 font-serif border-2 rounded-md border-black px-28 py-2">
+                    </div>
+                    <div class="flex items-center mt-5">
+                        <label for="project category" class="block text-2xl font-bold text-black font-serif mr-11">Project category:</label>
+                        <select id="dropdown" class="text-center text-xl font-bold text-black mt-3 font-serif border-2 rounded-md border-black px-10 py-2">
+                        
+                            <option >----------Select----------</option>
+                            <option>Audiobook</option>
+                            <option>Audio guide</option>
+                            <option>e-Learning</option>
+                            <option>Navigation</option>
+                            <option>Video Presentation</option>
+                            <option>Teach</option>
+                            <option>TV Narrator / Documentary</option>
+                            <option>Comerical</option>
+                            <option>Television Series</option>
+                            <option>Movie</option>
+                            <option>Animation Movie</option>
+                            <option>Animation Series</option>
+                            <option>Audio Discription (AD)</option>
+                            <option>Automated Dialouge Replacement (ADR)</option>
+                            <option>Gaming</option>
+                            <option>Subtitles</option>
+                            <option>Event Presentation / Internal</option>
+                            <option>Phone Prompts or Instore Radio</option>
+                        </select>
+                    
+                    </div>
+                    <div class="flex items-center mt-5">
+                        <label for="script" class="block text-2xl font-bold text-black font-serif mr-9">Script (Optional):</label>
+                        <input type="file" id="upload" placeholder="Upload Script Reference File" class="text-xl font-bold text-black mt-3 font-serif border-2 rounded-md border-black px-8 py-2">
+                    </div>
+                    <div class="flex items-center mt-5">
+                        <label for="Brief" class="block text-2xl font-bold text-black font-serif mr-44">Brief:</label>
+                        <input type="text" id="Brief" placeholder="Share As Much Iformation About Your Project As Posible." class="text-xl font-bold text-black mt-3 font-serif border-2 rounded-md border-black px-28 py-7">
+                    
+                    </div>
+
+                <div class="text-center ">
+                    <button type="submit" class="bg-GreenishBlue hover:bg-teal-500 mt-7 text-white font-bold font-serif py-2 px-4 rounded">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const openModalButton = document.getElementById('openModalButton');
+        const modal = document.getElementById('myModal');
+        const overlay = document.getElementById('overlay');
+        const closeButton = document.getElementById('closeButton');
+
+        openModalButton.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            overlay.classList.remove('hidden');
+        });
+
+        closeButton.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            overlay.classList.add('hidden');
+        });
+
+        overlay.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            overlay.classList.add('hidden');
+        });
+    </script>      
+    </div>
+    </center>
+
+    <div class=" rounded-lg m-2 mt-2">
+        <div class=" mt-16 flex space-x-4 text-center justify-center p-10">
+            <div class="bg-white h-80 w-96  rounded-3xl overflow-hidden shadow-md">
+                
+                    <div class="flex items-start justify-center">
+                    <img src="amutha.jpeg" alt="person" class="h-28 w-32 rounded-full">
+                    <img src="bx-heart.svg" alt="heart" class="relative top-2 left-20 cursor-pointer">
+                    </div>
+                    
+                
+                <div class="mt-3 text-base text-GreenishBlue font-serif">
+                <p>Name: Amutha</p>
+                <p>Gender: Female</p>
+                <p>Category: Movie, Serial, Animation</p>
+                <p>Language: Tamil</p>
+                <p>Slang: Kongu,Madras</p>
+                <div class="cursor-pointer">
+                <img src="bx-right-arrow.svg" alt="play" class="ml-20 mt-5 h-6 w-6  ">
+                <img src="bx-volume-full.svg" alt="volume" class="relative left-60 bottom-6">
+                <img src="bx-dots-vertical-rounded.svg" alt="doot" class="relative left-72 bottom-12">
+                </div>
+
+            </div>
+            </div>
+            <div class="bg-white h-80 w-96  rounded-3xl overflow-hidden shadow-md">
+                <div class="flex items-start justify-center">
+                    <img src="hari.jpeg" alt="person" class="h-28 w-32 rounded-full">
+                    <img src="bx-heart.svg" alt="heart" class="relative top-2 left-20 cursor-pointer">
+                    </div>
+                <div class="mt-3 text-base text-GreenishBlue font-serif">
+                    <p>Name: Hari</p>
+                    <p>Gender: Male</p>
+                    <p>Category: Movie, Serial, Animation</p>
+                    <p>Language: Tamil</p>
+                    <p>Slang: Kongu,Madras</p>
+                    <div class="cursor-pointer">
+                        <img src="bx-right-arrow.svg" alt="play" class="ml-20 mt-5 h-6 w-6  ">
+                        <img src="bx-volume-full.svg" alt="volume" class="relative left-60 bottom-6">
+                        <img src="bx-dots-vertical-rounded.svg" alt="doot" class="relative left-72 bottom-12">
+                    </div>
+                </div>
+                </div>
+                <div class="bg-white h-80 w-96 rounded-3xl overflow-hidden shadow-md">
+                    <div class="flex items-start justify-center">
+                        <img src="bharathir.jpeg" alt="person" class="h-28 w-32 rounded-full">
+                        <img src="bx-heart.svg" alt="heart" class="relative top-2 left-20 cursor-pointer">
+                        </div>
+                    <div class="mt-3 text-base text-GreenishBlue  font-serif">
+                        <p>Name: Bharathi</p>
+                        <p>Gender: Male</p>
+                        <p>Category: Movie, Serial, Animation</p>
+                        <p>Language: Tamil</p>
+                        <p>Slang: Kongu,Madras</p>
+                        <div class="cursor-pointer">
+                            <img src="bx-right-arrow.svg" alt="play" class="ml-20 mt-5 h-6 w-6  ">
+                            <img src="bx-volume-full.svg" alt="volume" class="relative left-60 bottom-6">
+                            <img src="bx-dots-vertical-rounded.svg" alt="doot" class="relative left-72 bottom-12">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="bg-white h-80 w-96 rounded-3xl overflow-hidden shadow-md">
+                        <div class="flex items-start justify-center">
+                            <img src="kathir.jpg" alt="person" class="h-28 w-32 rounded-full">
+                            <img src="bx-heart.svg" alt="heart" class="relative top-2 left-20 cursor-pointer">
+                            </div>
+                        <div class="mt-3 text-base text-GreenishBlue  font-serif">
+                            <p>Name: Senkathir</p>
+                            <p>Gender: Male</p>
+                            <p>Category: Movie, Serial, Animation</p>
+                            <p>Language: Tamil</p>
+                            <p>Slang: Kongu,Madras</p>
+                            <div class="cursor-pointer ">
+                                <img src="bx-right-arrow.svg" alt="play" class="ml-20 mt-5 h-6 w-6  ">
+                                <img src="bx-volume-full.svg" alt="volume" class="relative left-60 bottom-6">
+                                <img src="bx-dots-vertical-rounded.svg" alt="doot" class="relative left-72 bottom-12">
+                            </div>
+                        </div>
+                        </div>
+        </div>
+    </div>
+</center>
+<center>
+    
+        <div class=" bg-PowderBlue text-center font-bold  mr-96 ml-96 p-2  rounded-3xl ">
+            <div class="mt-12 mb-4 text-xl text-teal-900 font-serif">
+            <p>© Copyright © 2020. South Indian Cine, Television Artistes and Dubbing Artistes</p>
+            <p>Union. All Rights Reserved.</p> 
+            <p>South Indian Cine, Television Artistes and Dubbing Artistes Union ESTD : 1983 –</p>
+            <p>Regd No. 1337/MDS Affiliated with FEFSI No.166, Paranjothi Street, Sri Devi Garden</p>
+            <p>Main Road, Valasaravakkam, Chennai-87</p>
+            <a class="text-GreenishBlue hover:text-black" href="https://frappeframework.com/?source=website_footer"><h2>Built on Freappe</h2></a>
+            </div>
+        </div>
+</center>
+    
+
+    
+</body>
+</html>
